@@ -16,7 +16,7 @@ class Header extends React.Component {
               alt="HappyBirthday.com logo"
               src={happyBirthdayLogo}
               width="30px"
-              className="d-inline-block align-top mx-3"
+              className="d-inline-block align-top"
             />{' '}
             {this.props.title}
           </Navbar.Brand>
