@@ -39,7 +39,7 @@ Step 4: Run `npm install`
 
 Step 5: Run `npm start`
   
-* The application automatically run in your default browser after couple of second.
+* The app will run automatically in your default browser after a few seconds.
 
 ### Usage Scenarios
 **Scenario 1:** Navigation to register page
