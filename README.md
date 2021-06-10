@@ -38,7 +38,7 @@ Step 3: Run `cd happybirthday.com_v2-main`
 Step 4: Run `npm install`
 
 Step 5: Run `npm start`
-
+*The application automatically run in your default browser after couple of second.
 
 ### Usage Scenarios
 **Scenario 1:** Navigation to register page
