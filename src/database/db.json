@@ -1,0 +1,79 @@
+{
+  "accounts": [
+    {
+      "id": "0",
+      "name": "Sefa Şenlik",
+      "mail": "sefa@gmail.com",
+      "pass": "123123",
+      "phone": "535 456 5827"
+    },
+    {
+      "id": "1",
+      "name": "Example Person",
+      "mail": "example@domain.com",
+      "pass": "test123",
+      "phone": "952 279 2838"
+    },
+    {
+      "id": "2",
+      "name": "Sefa",
+      "mail": "s@g.c",
+      "pass": "123123",
+      "phone": "23"
+    },
+    {
+      "id": "3",
+      "name": "Ali Veli",
+      "mail": "ali@gmail.com",
+      "pass": "123321",
+      "phone": "535 654 8572"
+    }
+  ],
+  "records": [
+    {
+      "id": "0",
+      "birthdays": [
+        {
+          "name": "Sefa",
+          "bday": "2021-06-15",
+          "note": "",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "birthdays": [
+        {
+          "name": "John Doe",
+          "bday": "1972-12-30",
+          "note": "Anything expensive looking",
+          "color": "#000000"
+        }
+      ]
+    },
+    {
+      "id": "ANnNHdx"
+    },
+    {
+      "id": "zZshL1A"
+    },
+    {
+      "id": "3",
+      "birthdays": [
+        {
+          "name": "Sefa",
+          "bday": "2021-06-15",
+          "note": "dasd",
+          "color": "#2d4b53"
+        },
+        {
+          "name": "sefa",
+          "bday": "2021-06-21",
+          "note": "",
+          "color": ""
+        }
+      ]
+    }
+  ]
+}

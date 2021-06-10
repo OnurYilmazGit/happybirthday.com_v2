@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import HomePage from './containers/HomePage'
+import HomePage from './components/HomePage'
+import FindSong from './components/FindSong'
+import NotFound from './components/NotFound'
 import Hub from './containers/Hub'
-import FindSong from './containers/FindSong'
-import NotFound from './containers/NotFound'
 
 import './App.css';
 
