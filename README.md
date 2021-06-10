@@ -1,105 +1,70 @@
-# HappyBirthday.com - CS391 Project 2
+# Getting Started with Create React App
 
-### Project Members:
-- S012782 - Sefa ŞENLİK
-- S009604 - Onur YILMAZ
-- S015646 - Cem DENİZSEL
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h2>What is the HappyBirthday.com ?</h2> 
+## Available Scripts
 
-<t> Sometimes it is blushing for us not to remember the birthdays of people around us. Therefore, HappyBirthday.com is a website designed to record birthdays and help us remember the birthdays of our friends and family. Furtherly, our website provides great functions like taking additional notes or choose the favourite colour of the person.  
-These cool functions help the user remember events in more detail, and prepare better gifts. It is a completely free web service, so any user can create an account easily and register directly via mobile phone or PC. HappyBirthday.com, just click and remember the party.
+In the project directory, you can run:
 
-## Instructions for running the project
+### `npm start`
 
-### Pre-requisities
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#### Git
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-* Available from https://git-scm.com/downloads
+### `npm test`
 
-#### Web Browser
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-* Any majorly used web browser with the latest version is okay.
+### `npm run build`
 
-#### Node.js
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-* Download and install Node.js from https://nodejs.org/en/download/
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Manually
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Step 1: Download files in the repository
-* Go to https://github.com/OnurYilmazGit/happybirthday.com_v2 and download the repository.
+### `npm run eject`
 
-Step 2: Open your terminal.
-  
-Step 3: Run `cd happybirthday.com_v2-main`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Step 4: Run `npm install`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Step 5: Run `npm start`
-  
-* The app will run automatically in your default browser after a few seconds.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Usage Scenarios
-**Scenario 1:** Navigation to register page
-- The main page is displayed to the user
-  - If user clicks the "Register" button, register tab is displayed on the next window.
-  - If user clicks the "Login" button, login tab is displayed on the next window.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**Scenario 2:** User fails registration
-- User provides the credentials on the registration tab
-- At least one of the user details is not in the correct format
-- The respective error pop-ups are displayed
+## Learn More
 
-**Scenario 3:** User successfully registers
-- User provides the credentials on the registration tab
-- All account details are in the correct format
-- User details are stored in the localStorage
-- A success message is displayed
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-**Scenario 4:** User fails login
-- User provides the credentials on the login tab
-- Email address is not in the correct format or user is not found among the registered accounts
-- Respective error message/pop-up is displayed
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-**Scenario 5:** User successfully logs in
-- User provides credentials in the correct format
-- User is found in the list of registered users
-- A "successful login" message is displayed
-- User is directed to the respective user hub
-- Birthday records, if any, are listed on the window
+### Code Splitting
 
-**Scenario 6:** User successfully adds a birthday record
-- User is directed to his/her user hub after a successful login
-- User clicks "Add Birthday" button
-- A modal box displaying the form to provide birthday details is displayed
-- User provides details in correct formats
-- User clicks "Add" button on the modal box
-- Birthday record is added to the birthday list of current user
-- The modal box is closed and birthday list on the screen is refreshed
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-**Scenario 7:** User deletes a birthday record
-- User is directed to his/her user hub after a successful login
-- User selects one of the birthday records displayed on the window
-- User clicks "Delete" button
-- The selected birthday record is removed from the localStorage and the birthday list being displayed is updated accordingly
+### Analyzing the Bundle Size
 
-**Scenario 8:** User edits a birthday record
-- User is directed to his/her user hub after a successful login
-- User selects one of the birthday records displayed on the window
-- User clicks "Edit" button
-- A modal box displaying the form to provide birthday details is displayed
-- User provides details in correct formats
-- User clicks "Edit" button on the modal box
-- Birthday record is updated on the birthday list of current user
-- The modal box is closed and birthday list on the screen is refreshed
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Responsibilities of each project member
+### Making a Progressive Web App
 
-- **Onur YILMAZ**: Created the signup and sign-in pages. Used WebStorage API to store user information on browser. Adjusted web-pages background style, color, image etc. 
-- **Cem DENİZSEL**: Co-created user hub page. Utilised localStorage to store and display registered list of birthdays. 
-- **Sefa ŞENLİK**: Provided various visual materials. Co-created index/home and user hub pages.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Preferred Libraries
-We utilized  built-in functions and algorithms, these resources were sufficient for developing this project. Therefore, we did not use any external libraries. 
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
