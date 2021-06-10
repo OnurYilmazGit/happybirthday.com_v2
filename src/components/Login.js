@@ -16,6 +16,7 @@ export default class Login extends React.Component {
   handleLoginChange() {
 		const accountFilter = this.props.accountList.filter(account => account.mail === this.state.mail);
 		if (accountFilter.length === 1 && accountFilter[0].pass === this.state.pass) {
+			this.props.onLoginAccount(accountFilter[0].id)
 			this.props.onLoginChange(true);
 		} else {
 			alert("Invalid Login! Please check your credentials.");
@@ -36,7 +37,7 @@ export default class Login extends React.Component {
 		return (
 			<Container>
 				<Row>
-					<Col md={{ span: 4, offset: 4 }}>
+					<Col lg={{ span: 4, offset: 4 }}>
 						<Form>
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>

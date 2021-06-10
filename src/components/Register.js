@@ -10,7 +10,7 @@ export default class Register extends React.Component {
     super(props);
     this.handleAddAccount = this.handleAddAccount.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-		this.state = {name: "", mail: "", pass: "", phone: ""}
+		this.state = {name: "", mail: "", pass: "", passRepeat: "", phone: ""}
   }
 
   handleAddAccount(e) {
@@ -18,7 +18,9 @@ export default class Register extends React.Component {
 
 		const accountFilter = this.props.accountList.filter(account => account.mail === this.state.mail);
 
-    if (accountFilter.length === 0) {
+		if (this.state.pass !== this.state.passRepeat) {
+			alert("Passwords don't match.");
+		} else if (accountFilter.length === 0) {
       let account = {"id":this.props.accountList.length.toString(), "name":this.state.name, "mail":this.state.mail, "pass":this.state.pass, "phone":this.state.phone}
 			this.props.onAddAccount(account);
 			alert("You have successfully registered.");
@@ -41,7 +43,7 @@ export default class Register extends React.Component {
 		return (
 			<Container>
 				<Row>
-					<Col md={{ span: 4, offset: 4 }}>
+					<Col lg={{ span: 4, offset: 4 }}>
 						<Form onSubmit={this.handleAddAccount}>
 							<Form.Group controlId="formBasicName">
 								<Form.Label>Name</Form.Label>
@@ -50,7 +52,7 @@ export default class Register extends React.Component {
 
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
-								<Form.Control name="mail" type="email" placeholder="example@mail.com" onChange={this.handleInputChange}/>
+								<Form.Control name="mail" type="email" placeholder="example@mail.com" required onChange={this.handleInputChange}/>
 								<Form.Text className="text-muted">
 									We'll never share your email with anyone else.
 								</Form.Text>
@@ -58,12 +60,17 @@ export default class Register extends React.Component {
 
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Password</Form.Label>
-								<Form.Control name="pass" type="password" minlength="6" maxlength="30" placeholder="Password" onChange={this.handleInputChange}/>
+								<Form.Control name="pass" type="password" minLength="6" maxLength="30" placeholder="Password" required onChange={this.handleInputChange}/>
+							</Form.Group>
+
+							<Form.Group controlId="formBasicPasswordRepeat">
+								<Form.Label>Re-enter password</Form.Label>
+								<Form.Control name="passRepeat" type="password" minLength="6" maxLength="30" placeholder="Re-enter password" required onChange={this.handleInputChange}/>
 							</Form.Group>
 
 							<Form.Group controlId="formBasicPhone">
 								<Form.Label>Phone Number</Form.Label>
-								<Form.Control name="phone" type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="xxx xxx xxxx" onChange={this.handleInputChange}/>
+								<Form.Control name="phone" type="tel" /*pattern="[0-9]{3} [0-9]{3} [0-9]{4}"*/ placeholder="xxx xxx xxxx" onChange={this.handleInputChange}/>
 							</Form.Group>
 
 							<Button variant="primary" type="submit">

@@ -11,6 +11,21 @@ import NotFound from './containers/NotFound'
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginChange = this.handleLoginChange.bind(this);
+    this.handleLoginAccount = this.handleLoginAccount.bind(this);
+    this.state = {loggedIn: false, loginAccount: -1};
+  }
+
+  handleLoginChange(loginBool) {
+    this.setState({loggedIn: loginBool});
+  }
+
+  handleLoginAccount(accountIndex) {
+    this.setState({loginAccount: accountIndex});
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,7 +33,7 @@ class App extends Component {
           <Header title="HappyBirthday.com"/>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/hub" component={Hub} />
+            <Route exact path="/hub" render={(props) => ( <Hub {...props} loggedIn={this.state.loggedIn} handleLoginChange={this.handleLoginChange} loginAccount={this.state.loginAccount} handleLoginAccount={this.handleLoginAccount} />)} />
             <Route exact path="/findsong" component={FindSong} />
             <Route path="*" component={NotFound} />
           </Switch>

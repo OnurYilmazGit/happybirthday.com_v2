@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Card, Button, Form } from 'react-bootstrap';
-import Login from '../components/Login';
 
 export default function FindSong() {
 	const url = "https://www.youtube.com/results?search_query=birthday+song+";

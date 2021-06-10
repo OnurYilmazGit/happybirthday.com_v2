@@ -10,7 +10,7 @@ class Header extends React.Component {
   render() {    
     return (
       <Navbar expand="md" bg="dark" variant="dark">
-        <LinkContainer to="/">                
+        <LinkContainer to="/">
           <Navbar.Brand href="#home">
             <img
               alt="HappyBirthday.com logo"

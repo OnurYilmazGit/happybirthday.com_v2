@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Container, Col, Row, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import Register from '../components/Register';
 import Login from '../components/Login';
@@ -27,20 +27,20 @@ class LoginScreen extends React.Component {
     })
   }
 
-  handleComponentSwitch(showLogin) {
-    this.setState({showLoginComponent: showLogin});
-  }
-
   onAddAccount(account){
     api.post('/', account)
       .then(res => this.getAccounts())
+  }
+
+  handleComponentSwitch(showLogin) {
+    this.setState({showLoginComponent: showLogin});
   }
   
   render() {
     return (
       <Container>
         <Row>
-          <Col md={{ span: 4, offset: 4 }}>
+          <Col lg={{ span: 4, offset: 4 }}>
             <ToggleButtonGroup className="my-3" type="radio" name="options" defaultValue={1}>
               <ToggleButton value={1} variant="secondary" onClick={() => this.handleComponentSwitch(false)}>Register</ToggleButton>
               <ToggleButton value={2} variant="secondary" onClick={() => this.handleComponentSwitch(true)}>Login</ToggleButton>
@@ -49,7 +49,7 @@ class LoginScreen extends React.Component {
         </Row>
         <Row>
           <Col>
-            {this.state.showLoginComponent ? <Login accountList={this.state.accountList} onLoginChange={this.props.handleLoginChange}/>
+            {this.state.showLoginComponent ? <Login accountList={this.state.accountList} onLoginAccount={this.props.handleLoginAccount} onLoginChange={this.props.handleLoginChange}/>
                                            : <Register accountList={this.state.accountList} onAddAccount={this.onAddAccount}/>}
           </Col>
         </Row>
