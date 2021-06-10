@@ -4,21 +4,41 @@
 - S012782 - Sefa ŞENLİK
 - S009604 - Onur YILMAZ
 - S015646 - Cem DENİZSEL
-- 
+
 <h2>What is the HappyBirthday.com ?</h2> 
 
 <t> Sometimes it is blushing for us not to remember the birthdays of people around us. Therefore, HappyBirthday.com is a website designed to record birthdays and help us remember the birthdays of our friends and family. Furtherly, our website provides great functions like taking additional notes or choose the favourite colour of the person.  
 These cool functions help the user remember events in more detail, and prepare better gifts. It is a completely free web service, so any user can create an account easily and register directly via mobile phone or PC. HappyBirthday.com, just click and remember the party.
 
-### Instructions 
-- First download this repository https://github.com/OnurYilmazGit/HappyBirthday.com.git
-- Click the index.html file and wait for the website to open on your browser.
-- The first page provides you login and register features, if you have already an account you don’t need to click register, 
-- If you do not have an account, just click the register button. For the sign-up to be successful, there are a few conditions: first, each email address needs to be unique and should be written in the correct form. Additionally, your password should match each other. 
-- After creating a free account, you need to click the login button to sign in to your account. But be careful, you have to write your email and password correctly. Otherwise, you can click the *“Forgot password?”* button.
-- When you sign in, the third page (user hub) will appear and you will see two tables on this page. These tables show upcoming birthdays and all birthdays in detail. 
-- If you want to add a new birthday, you just need to click "Add Birthday" button, then a pop-up window will appear and you can add your friend's name surname, birthday and some extra notes about this day. Additionally, you can choose a colour to represent this day. When you finish your process, you simply need to click “Add” button to register this day. 
-- As the final step, your all favourite days will appear on the screen.
+## Instructions for running the project
+
+### Pre-requisities
+
+#### Git
+
+* Available from https://git-scm.com/downloads
+
+#### Web Browser
+
+* Any majorly used web browser with the latest version is okay.
+
+#### Node.js
+
+* Download and install Node.js from https://nodejs.org/en/download/
+
+### Manually
+
+Step 1: Download files in the repository
+* Go to https://github.com/OnurYilmazGit/happybirthday.com_v2 and download the repository.
+
+Step 2: Open your terminal.
+  
+Step 3: Run `cd happybirthday.com_v2-main`
+
+Step 4: Run `npm install`
+
+Step 5: Run `npm start`
+
 
 ### Usage Scenarios
 **Scenario 1:** Navigation to register page
