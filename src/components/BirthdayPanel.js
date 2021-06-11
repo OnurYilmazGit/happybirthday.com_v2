@@ -11,7 +11,7 @@ export default class BirthdayPanel extends React.Component {
     this.getBirthdays = this.getBirthdays.bind(this);
     this.onModifyBirthday = this.onModifyBirthday.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.state = {name: "", bday: "", note: "", color: "", birthdayData: {}, birthdayList: []};
+    this.state = {name: "", bday: "", note: "", color: "#55C9EA", birthdayData: {}, birthdayList: []};
   }
 
   componentDidMount(){
@@ -35,8 +35,6 @@ export default class BirthdayPanel extends React.Component {
   onModifyBirthday(e, operation, index = 0){
     e.preventDefault();
 
-    // api.delete('/'+this.props.loginAccount.toString())
-
     let birthdayUpdate = this.state.birthdayList
     if (operation === "add") {
       let birthday = {"name": this.state.name, "bday": this.state.bday, "note": this.state.note, "color": this.state.color}
@@ -53,15 +51,15 @@ export default class BirthdayPanel extends React.Component {
     this.setState({ birthdayData: {"id": this.props.loginAccount.toString(), "birthdays":this.state.birthdayList} });
   
     api.patch('/'+this.props.loginAccount.toString(), this.state.birthdayData)
-      .then(res => this.getBirthdays())
+      .then(() => this.getBirthdays())
       .catch(err => { if (err.response.status === 404) {api.post('/', this.state.birthdayData).then(res => this.getBirthdays())}
                       else {console.log(err)}})
   }
 
-  onDeleteBirthday(id) {
-    api.delete(`/${id}`)
-      .then(res => this.getBirthdays())
-  }
+  // onDeleteBirthdays() {
+  //   api.delete('/'+this.props.loginAccount.toString())
+  //     .then(() => this.getBirthdays())
+  // }
 
   handleInputChange(event) {
     const target = event.target;
@@ -76,8 +74,8 @@ export default class BirthdayPanel extends React.Component {
   render() {
     return (
       <Container xs="12" md="3" className="justify-content-lg-center">
-        <Row>
-          <Col className="mt-3">
+        <Row className="justify-content-md-center">
+          <Col md={12} lg={8} className="mt-3">
             <Accordion>
               <Card>
                 <Card.Header>
@@ -105,7 +103,7 @@ export default class BirthdayPanel extends React.Component {
 
                       <Form.Group controlId="formBasicPhone">
                         <Form.Label>Favorite Color</Form.Label>
-                        <Form.Control name="color" type="color" value="#37BFE6" onChange={this.handleInputChange}/>
+                        <Form.Control name="color" type="color" value={this.state.color} onChange={this.handleInputChange}/>
                       </Form.Group>
 
                       <Button className="mr-2" variant="success" type="submit">
@@ -122,9 +120,8 @@ export default class BirthdayPanel extends React.Component {
           </Col>
         </Row>
 
-
-        <Row className="my-3">
-          <Col>
+        <Row className="justify-content-md-center my-3">
+          <Col md={12} lg={8}>
             {this.state.birthdayList.length > 0 ?
               this.state.birthdayList.map((item, index) => {
                 return (
@@ -150,10 +147,18 @@ export default class BirthdayPanel extends React.Component {
               </Card>
             }
           </Col>
-        </Row>
+        </Row>        
+        
+        {/* <Row className="justify-content-md-center">
+          <Col md={12} lg={8}>           
+            <Button className="w-100 mb-2" variant="danger" onClick={() => this.onDeleteBirthdays()}>
+              Delete All
+            </Button>
+          </Col>
+        </Row> */}
 
-        <Row>
-          <Col>           
+        <Row className="justify-content-md-center">
+          <Col md={12} lg={8}>           
             <Button className="w-100" variant="primary" onClick={() => this.props.onLoginChange(false)}>
               Logout
             </Button>

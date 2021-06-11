@@ -21,10 +21,11 @@ class LoginScreen extends React.Component {
   }
 
   getAccounts = () => {
-    api.get('/').then(res => {
-      const accountList = res.data;
-      this.setState({ accountList });
-    })
+    api.get('/')
+      .then(res => { const accountList = res.data;
+                     this.setState({ accountList });})
+      .catch(err => { if (err.response) {alert("Could not retrieve accounts. Server might be down.")}
+                      else {console.log(err)}})
   }
 
   onAddAccount(account){

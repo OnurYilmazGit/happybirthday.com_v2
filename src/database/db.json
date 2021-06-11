@@ -31,17 +31,6 @@
   ],
   "records": [
     {
-      "id": "0",
-      "birthdays": [
-        {
-          "name": "Sefa",
-          "bday": "2021-06-15",
-          "note": "",
-          "color": ""
-        }
-      ]
-    },
-    {
       "id": "1",
       "birthdays": [
         {
