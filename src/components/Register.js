@@ -47,12 +47,12 @@ export default class Register extends React.Component {
 						<Form onSubmit={this.handleAddAccount}>
 							<Form.Group controlId="formBasicName">
 								<Form.Label>Name</Form.Label>
-								<Form.Control name="name" type="text" placeholder="Name Surname" onChange={this.handleInputChange}/>
+								<Form.Control name="name" type="text" placeholder="Name Surname" maxLength="100" onChange={this.handleInputChange}/>
 							</Form.Group>
 
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
-								<Form.Control name="mail" type="email" placeholder="example@mail.com" required onChange={this.handleInputChange}/>
+								<Form.Control name="mail" type="email" placeholder="example@mail.com" maxLength="100" required onChange={this.handleInputChange}/>
 								<Form.Text className="text-muted">
 									We'll never share your email with anyone else.
 								</Form.Text>
@@ -70,7 +70,7 @@ export default class Register extends React.Component {
 
 							<Form.Group controlId="formBasicPhone">
 								<Form.Label>Phone Number</Form.Label>
-								<Form.Control name="phone" type="tel" /*pattern="[0-9]{3} [0-9]{3} [0-9]{4}"*/ placeholder="xxx xxx xxxx" onChange={this.handleInputChange}/>
+								<Form.Control name="phone" type="tel" /*pattern="[0-9]{3} [0-9]{3} [0-9]{4}"*/ maxLength="30" placeholder="xxx xxx xxxx" onChange={this.handleInputChange}/>
 							</Form.Group>
 
 							<Button variant="primary" type="submit">
