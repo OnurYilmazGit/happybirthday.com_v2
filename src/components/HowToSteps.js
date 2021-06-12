@@ -83,11 +83,11 @@ export default function FindSong() {
       </Card>
       <Card>
         <Card.Header>
-          <Accordion.Toggle as={Button} variant="link" eventKey="4">
+          <Accordion.Toggle as={Button} variant="link" eventKey="5">
             Step 6: Logging out
           </Accordion.Toggle>
         </Card.Header>
-        <Accordion.Collapse eventKey="4">
+        <Accordion.Collapse eventKey="5">
           <Card.Body>
             You can safely log out from your account via the "Logout" you
             can find at the bottom of the user hub screen.
@@ -96,11 +96,11 @@ export default function FindSong() {
       </Card>
       <Card>
         <Card.Header>
-          <Accordion.Toggle as={Button} variant="link" eventKey="4">
+          <Accordion.Toggle as={Button} variant="link" eventKey="6">
             Extra: Find Birthday Song™
           </Accordion.Toggle>
         </Card.Header>
-        <Accordion.Collapse eventKey="4">
+        <Accordion.Collapse eventKey="6">
           <Card.Body>
             With this extra feature, it is possible to reasily find a 
             lovely birthday song for your loved ones, and send it to 

@@ -24,8 +24,7 @@ class LoginScreen extends React.Component {
     api.get('/')
       .then(res => { const accountList = res.data;
                      this.setState({ accountList });})
-      .catch(err => { if (err.response) {alert("Could not retrieve accounts. Server might be down.")}
-                      else {console.log(err)}})
+      .catch(err => { alert("Could not retrieve accounts. Server might be down.") })
   }
 
   onAddAccount(account){

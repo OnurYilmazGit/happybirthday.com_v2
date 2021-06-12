@@ -18,6 +18,10 @@ class App extends Component {
     this.state = {loggedIn: false, loginAccount: -1};
   }
 
+  componentDidMount(){
+    document.title = "HappyBirthday.com"
+  }
+
   handleLoginChange(loginBool) {
     this.setState({loggedIn: loginBool});
   }

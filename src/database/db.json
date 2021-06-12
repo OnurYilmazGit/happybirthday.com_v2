@@ -20,16 +20,32 @@
       "mail": "s@g.c",
       "pass": "123123",
       "phone": "23"
-    },
-    {
-      "id": "3",
-      "name": "Ali Veli",
-      "mail": "ali@gmail.com",
-      "pass": "123321",
-      "phone": "535 654 8572"
     }
   ],
   "records": [
+    {
+      "id": "0",
+      "birthdays": [
+        {
+          "name": "Sefa Şenlik",
+          "bday": "1990-01-26",
+          "note": "A cool sports car",
+          "color": "#000000"
+        },
+        {
+          "name": "Ankaralı Turgut",
+          "bday": "1963-06-06",
+          "note": "He loves to make music",
+          "color": "#13ffaa"
+        },
+        {
+          "name": "Mahmut Tuncer",
+          "bday": "1961-05-05",
+          "note": "Just a flamboyant piece of cloth would do the job.",
+          "color": "#3333ff"
+        }
+      ]
+    },
     {
       "id": "1",
       "birthdays": [
@@ -38,29 +54,6 @@
           "bday": "1972-12-30",
           "note": "Anything expensive looking",
           "color": "#000000"
-        }
-      ]
-    },
-    {
-      "id": "ANnNHdx"
-    },
-    {
-      "id": "zZshL1A"
-    },
-    {
-      "id": "3",
-      "birthdays": [
-        {
-          "name": "Sefa",
-          "bday": "2021-06-15",
-          "note": "dasd",
-          "color": "#2d4b53"
-        },
-        {
-          "name": "sefa",
-          "bday": "2021-06-21",
-          "note": "",
-          "color": ""
         }
       ]
     }
