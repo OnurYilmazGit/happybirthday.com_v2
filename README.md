@@ -7,7 +7,7 @@
 
 ### Responsibilities of each project member
 
-- **Onur YILMAZ**: Created the signup and sign-in pages. Set up REST API and Axios methods for server communication. Edited project report.
+- **Onur YILMAZ**: Created the sign-up and sign-in pages. Set up REST API and Axios methods for server communication. Updated project report(.md file).
 - **Cem DENİZSEL**: Co-created user hub page, added usage instructions to homepage. Added find song page and its functionalities.
 - **Sefa ŞENLİK**: Provided visual materials. Handled responsiveness of the pages. Co-created index/home and user hub pages. 
 
