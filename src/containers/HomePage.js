@@ -1,14 +1,11 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
 
 import happyBirthdayLogo from "../images/HBcom.svg";
-import Login from "../components/Login";
 import HowToSteps from "../components/HowToSteps";
 
 class HomePage extends React.Component {
@@ -36,20 +33,6 @@ class HomePage extends React.Component {
             <HowToSteps />
           </Col>
         </Row>
-            {/* <Container className="mt-4">
-              <Row className="justify-content-md-center">
-                <Col xs lg="2">
-                  <LinkContainer to="/register">        
-                    <Button variant="primary">Register</Button>{' '}
-                  </LinkContainer>
-                </Col>
-                <Col xs lg="2">  
-                  <LinkContainer to="/login">  
-                    <Button variant="secondary">Login</Button>{' '}
-                  </LinkContainer>
-                </Col>
-              </Row>
-            </Container> */}
       </Container>
     );
   }
